@@ -1,0 +1,68 @@
+% This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs
+% 3.0 Unported License. To view a copy of this license, visit
+% http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+% Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+
+\documentclass{beamer}
+
+\usepackage[utf8x]{inputenc}
+% \usetheme{Excilys}
+\usetheme{CambridgeUS}
+
+% rappel du plan à chaque partie
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>\frametitle{Plan}
+    \frametitle{}
+    \tableofcontents[hideothersubsections,currentsection]
+  \end{frame}
+}
+
+% n° de ligne en bas
+% \defbeamertemplate*{footline}{infolines theme}
+% {
+% \begin{beamercolorbox}{date in head/foot}%
+% \centering
+% {
+  % \insertframenumber{} / \inserttotalframenumber
+% }
+% \end{beamercolorbox}%
+% }%
+
+% se débarasse des symboles de navigation en bas de la page
+\setbeamertemplate{navigation symbols}{}
+
+
+\title{Formation git}
+\author{Groupe Excilys}
+
+\begin{document}
+%-------------------------------------------------------------------------------
+\input{titlepage}
+%-------------------------------------------------------------------------------
+\section*{Introduction}
+\input{introduction}
+%-------------------------------------------------------------------------------
+\begin{frame}\frametitle{Plan}
+\tableofcontents
+\end{frame}
+%-------------------------------------------------------------------------------
+\section{Travailler en local}
+\input{partie1}
+%-------------------------------------------------------------------------------
+\section{Repository distant}
+\input{partie2}
+%-------------------------------------------------------------------------------
+\section{Branches}
+\input{partie3}
+%-------------------------------------------------------------------------------
+\section{Utilisation avancée et workflows}
+\input{partie4}
+%-------------------------------------------------------------------------------
+\section*{Conclusion}
+\input{conclusion}
+%-------------------------------------------------------------------------------
+\end{document}
+
+% max 80 columns : merges become messy with pure text and longer lines.
+% vim: set colorcolumn=+1 textwidth=80:

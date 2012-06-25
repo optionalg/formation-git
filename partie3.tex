@@ -1,0 +1,58 @@
+\begin{frame}[fragile]\frametitle{Les branches dans git}
+  Une branche est ...
+  \begin{itemize}
+  \item Gratuite !
+  \note{beaucoup plus simple que sur svn (pas de recopie du projet par exemple)}
+  \item Un pointeur vers un commit
+  \note{pas un dossier, juste une "etiquette" pointant sur un commit}
+  \item merge entre branches facile
+  \item utile quelle que soit la durée de vie de cette branche
+  \end{itemize}
+
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[fragile]\frametitle{Manipulation de branches}
+  \begin{itemize}
+  \item Lister toutes les branches: \alert{git branch [-r] [-a]}
+  \item Se placer sur une branche: \alert{git checkout [nom\_branche]}
+  \item Créer une branche: \alert{git branch [nom\_branche]}
+  \item Suivre une branche distante : \alert{git checkout -b [nom\_branche]
+  [branche\_distante]}
+  \item Supprimer une branche: \alert{git branch -d [nom\_branche]}
+  \end{itemize}
+
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[fragile]\frametitle{Cas d'utilisation courants}
+  \begin{itemize}
+\item développement d'une fonctionnalité
+\item correction de bug
+\item branche de maintenance
+  \end{itemize}
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[fragile]\frametitle{Intérêts des branches distantes}
+  \begin{itemize}
+  \item partage pour code review
+  \item mise en place de build incassables
+  \item autres workflow avancés ...
+  % TODO : trouver une meilleure transition
+  \end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\begin{frame}\frametitle{TP}
+  utiliser comme projet de départ une webapp simple (mvn archetype), avec un mvn
+jetty:run comme serveur.
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}\frametitle{TP : Évolutions parallèles 1}
+  Ajouter deux fonctionnalités (deux équipes) (pas de conflits)
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}\frametitle{TP : Évolutions parallèles 2}
+  Encore deux devs séparés, mais sur le même code (merge conflicts)
+\end{frame}
+%-------------------------------------------------------------------------------
+% max 80 columns : merges become messy with pure text and longer lines.
+% vim: set colorcolumn=+1 textwidth=80:
